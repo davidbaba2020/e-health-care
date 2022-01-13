@@ -1,5 +1,6 @@
 package com.hda.dev.controller;
 
+import com.hda.dev.dto.DiagnosisDto;
 import com.hda.dev.dto.DoctorRegistrationDto;
 import com.hda.dev.dto.PatientRegistrationDto;
 import com.hda.dev.dto.SymptomsDto;
@@ -32,9 +33,9 @@ public class UserController {
         return new ResponseEntity<>(message, CREATED);
     }
 
-    @RequestMapping(value = "/patient-symptoms", method = RequestMethod.POST)
-    public ResponseEntity<String> patientSymptoms(@Valid @RequestBody SymptomsDto symptomsDto) throws Exception {
-        String message = userService.createPatientSymptoms(symptomsDto);
+    @RequestMapping(value = "/patient-symptoms-diagnosis", method = RequestMethod.POST)
+    public ResponseEntity<String> patientSymptoms(@Valid @RequestBody SymptomsDto symptomsDto, @Valid @RequestBody DiagnosisDto diagnosisDto) throws Exception {
+        String message = userService.createPatientSymptomsAndDiagnosis(symptomsDto, diagnosisDto);
         return new ResponseEntity<>(message, CREATED);
     }
 }
