@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>health-diagnosis-app2</groupId>
 <!--	<groupId>registration-login-spring-boot-security-thymeleaf</groupId>-->
-	<artifactId>registration-login-spring-boot-security-thymeleaf</artifactId>
+	<artifactId>health-application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>health-diagnosis-application</name>
 <!--	<name>registration-login-spring-boot-security-thymeleaf-rdbms</name>-->
